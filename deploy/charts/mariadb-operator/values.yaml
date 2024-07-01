@@ -2,7 +2,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: ghcr.io/mariadb-operator/mariadb-operator
+  repository: docker-registry3.mariadb.com/mariadb-operator/mariadb-operator
   pullPolicy: IfNotPresent
   # -- Image tag to use. By default the chart appVersion is used
   tag: ""
@@ -89,7 +89,7 @@ affinity: {}
 
 webhook:
   image:
-    repository: ghcr.io/mariadb-operator/mariadb-operator
+    repository: docker-registry3.mariadb.com/mariadb-operator/mariadb-operator
     pullPolicy: IfNotPresent
     # -- Image tag to use. By default the chart appVersion is used
     tag: ""
@@ -105,10 +105,12 @@ webhook:
       enabled: false
       # -- Issuer reference to be used in the Certificate resource. If not provided, a self-signed issuer will be used.
       issuerRef: {}
-       # -- Duration to be used in the Certificate resource,
+      # -- Duration to be used in the Certificate resource,
       duration: ""
-       # -- Renew before duration to be used in the Certificate resource.
+      # -- Renew before duration to be used in the Certificate resource.
       renewBefore: ""
+      # -- The maximum number of CertificateRequest revisions that are maintained in the Certificate’s history.
+      revisionHistoryLimit: 3
     # -- Annotatioms to be added to webhook TLS secret.
     secretAnnotations: {}
     # -- Labels to be added to webhook TLS secret.
@@ -176,7 +178,7 @@ certController:
   # -- Specifies whether the cert-controller should be created.
   enabled: true
   image:
-    repository: ghcr.io/mariadb-operator/mariadb-operator
+    repository: docker-registry3.mariadb.com/mariadb-operator/mariadb-operator
     pullPolicy: IfNotPresent
     # -- Image tag to use. By default the chart appVersion is used
     tag: ""

@@ -30,7 +30,7 @@ KUBECTL_VERSION ?= v1.29.3
 KUSTOMIZE_VERSION ?= v5.3.0
 CONTROLLER_GEN_VERSION ?= v0.14.0
 ENVTEST_K8S_VERSION ?= 1.29
-GINKGO_VERSION ?= v2.17.2
+GINKGO_VERSION ?= v2.19.0
 GOLANGCI_LINT_VERSION ?= v1.56.2
 GORELEASER_VERSION ?= v1.24.0
 GO_LICENSES_VERSION ?= v1.0.0
@@ -42,7 +42,7 @@ YQ_VERSION ?= v4.18.1
 OPERATOR_SDK_VERSION ?= v1.34.1
 OPM_VERSION ?= v1.37.0
 OC_TAR_GZ_URL ?= https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/latest-4.9/openshift-client-linux-4.9.59.tar.gz
-PREFLIGHT_VERSION ?= 1.9.1
+PREFLIGHT_VERSION ?= 1.9.7
 
 .PHONY: kind
 kind: $(KIND) ## Download kind locally if necessary.
